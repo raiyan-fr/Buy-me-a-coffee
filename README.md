@@ -57,5 +57,5 @@ pnpm vite
 ---
 
 ## Author
-- @raiyan-fr
+- [@raiyan-fr](https://www.github.com/raiyan-fr)
 
