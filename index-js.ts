@@ -7,7 +7,6 @@ import {
   defineChain,
   type WalletClient,
   type PublicClient,
-  type Chain,
   type Address,
 } from "viem";
 import "viem/window";
