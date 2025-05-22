@@ -22,9 +22,9 @@ A decentralized application that allows supporters to send ETH tips ("coffees") 
 ## 📦 Tech Stack
 
 - **Frontend:** HTML, CSS (with gradients and subtle animations), TypeScript
-- **Blockchain Interaction:** [Viem](https://viem.sh/) (modern alternative to Ethers.js)
+- **Blockchain Interaction:** [Viem](https://viem.sh/) (modern alternative to Ethers.js and more suitable with Types)
 - **Smart Contract:** Solidity (assumed to be deployed separately)
-- **Network:** Localhost (`Hardhat`) or any Ethereum-compatible chain
+- **Network:** Localhost (`Foundry`) or any Ethereum-compatible chain
 
 ---
 
