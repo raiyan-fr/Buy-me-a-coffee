@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>☕ Buy Me a Coffee</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #6f4e37;
+        --secondary: #e6e2d3;
+        --accent: #c4b7a6;
+        --text: #3e2723;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        padding: 2rem;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      h1 {
+        color: var(--primary);
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        justify-content: center;
+      }
+
+      #connectBtn {
+        background: var(--primary);
+        color: white;
+        width: 100%;
+      }
+
+      #connectBtn:hover {
+        background: #5d3f2b;
+        transform: translateY(-2px);
+      }
+
+      .balance-section {
+        text-align: center;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: var(--secondary);
+        border-radius: 10px;
+      }
+
+      #balanceDisplay {
+        font-size: 1.5rem;
+        color: var(--primary);
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      .fund-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 2rem 0;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      input {
+        padding: 1rem;
+        border: 2px solid var(--accent);
+        border-radius: 10px;
+        flex: 1;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(111, 78, 55, 0.1);
+      }
+
+      #fundBtn {
+        background: var(--primary);
+        color: white;
+      }
+
+      #fundBtn:hover {
+        background: #5d3f2b;
+        transform: translateY(-2px);
+      }
+
+      #withdrawBtn {
+        background: var(--accent);
+        color: var(--text);
+        width: 100%;
+      }
+
+      #withdrawBtn:hover {
+        background: #b2a18f;
+        transform: translateY(-2px);
+      }
+
+      .fa-coffee,
+      .fa-wallet,
+      .fa-money-bill-wave {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <i class="fas fa-coffee"></i>
+        Buy Me a Coffee
+      </h1>
+
+      <div class="button-group">
+        <button id="connectBtn">
+          <i class="fas fa-wallet"></i>
+          Connect Wallet
+        </button>
+      </div>
+
+      <div class="balance-section">
+        <h3>Contract Balance</h3>
+        <div id="balanceDisplay">0.0000 ETH</div>
+        <button id="balanceBtn">Refresh Balance</button>
+      </div>
+
+      <div class="fund-form">
+        <div class="input-group">
+          <input
+            type="number"
+            min="0.001"
+            step="0.001"
+            id="ethAmountInp"
+            placeholder="0.1"
+            onkeyup="if(this.value<0)this.value=0"
+          />
+          <button id="fundBtn">
+            <i class="fas fa-coffee"></i>
+            Buy Coffee
+          </button>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button id="withdrawBtn">
+          <i class="fas fa-money-bill-wave"></i>
+          Withdraw Funds
+        </button>
+      </div>
+    </div>
+
+    <script src="index-js.ts" type="module"></script>
+  </body>
+</html>
